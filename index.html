@@ -5,20 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet">
     <title>Reservia</title>
 </head>
 <body>
     <header>
-        <figure>
-            <a href="#"><img src="" alt="logo-reservia" title="Reservia"></a>
-        </figure>
-        <nav>
-            <ul>
-                <li><a href="#">Hébergements</li></a>
-                <li><a href="#"></a>Activités</li></a>
-                <li><a href="#"></a>S'inscrire</li></a>
-            </ul>
-        </nav>
+        <div class="nav-top">
+            <div class="block-logo">
+                <figure>
+                    <a href="#"><img src="images/logo/Reservia.svg" alt="logo-reservia" title="Reservia"></a>
+                </figure>
+            </div>
+            <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Hébergements</li></a>
+                    <li><a href="#"></a>Activités</li></a>
+                </ul>
+            </nav>
+            <div class="inscription">
+                    <p><a>S'inscrire</a></p>
+            </div>
+            </div>
+        </div>
+ 
     </header>
     <!-- Formulaire de recherche-->
     <section class="recherche_hebergement">
@@ -26,8 +37,9 @@
         <p>En plein centre ville ou en pleine nature</p>
 
         <form action="#" method="post">
-            <div>
-                <div></div>
+            <div class="bouton_recherche">
+                <div><i class="fas fa-map-marker-alt"></i>
+                   </div>
                 <input type="" name="" id="" class="">
                 <button>Rerchercher</button>
             </div>
@@ -224,5 +236,6 @@
 
         </ul>
     </footer>    
+    <script src="https://kit.fontawesome.com/d6731f7e24.js" crossorigin="anonymous"></script>
 </body>
 </html>
