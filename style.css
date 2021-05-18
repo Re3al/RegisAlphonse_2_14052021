@@ -81,9 +81,110 @@ a.active{color: #0065FC;font-weight: 800;
     color: white;
     border-radius: 0px 7px 7px 0px;
 }
+/* Style des filtres */
+section.filtres
+{
+    display: flex;
+    width: 80%;
+    margin: 20px 0px;
+    font-weight: 800;
+    flex-wrap: wrap;
+}
+section.filtres p
+{
+    margin-right: 30px;
+}
+
+.bouton_filtre
+{
+    display: flex;
+    border-radius: 30px;
+    border-top: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    margin-right: 30px;
+}
+.bouton_filtre div
+{
+    background-color: #DEEBFF;
+    border-radius: 29px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+}
+.bouton_filtre div i
+{
+    color: #0065FC;
+    width: 100%;
+}
+
+.bouton_filtre p
+{
+    width: 100%;
+    text-align: center;
+}
 
 
+.hebergements
+{
+    display: flex;
+    justify-content: space-around;
+}
+.contenaire_hebergement, .contenaire_hebergement_populaire
+{
+    
+    width: 60%;
+    margin: 0px 30px;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+}
+.contenaire_hebergement{
+    width: 60%;
+    padding: 34px;
+}
+.contenaire_hebergement_populaire{
+    width: 20%;
+    padding: 34px;
+}
+.hebergement_list
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.hebergements_banniere
+{
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 101px;
+    border-radius: 20px 20px 0 0;
+    background-size: cover;
+}
+.carte
+{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 11px #e7e7e7;
+    padding: 5px;
+    width: 30%;
+    margin-bottom: 20px;
+}
+.contenaire_hebergement_populaire .carte
+{
+    width: 100%;
+}
 
+.carte h3, .carte p
+{
+    margin: 0;
+}
+.rank .active
+{
+    color: #0065FC;
+}
+/*** Image de fond des hebergements ***/
+.cannebiere{background-image:url(images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg)}
 
 
 
