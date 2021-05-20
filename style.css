@@ -138,6 +138,23 @@ section.filtres p
     display: flex;
     justify-content: space-around;
 }
+.logements
+{
+    display: flex;
+    align-items: center;
+}
+.titrage_populaire
+{
+    display: flex;
+    justify-content: space-between;
+}
+.titrage_populaire img
+{
+    width: 30px;
+    height: auto;
+}
+
+.logements img{width: 40px;height: 40px;}
 
 .recherche_hebergement, .filtres, .logements
 {
@@ -147,17 +164,17 @@ section.filtres p
 .contenaire_hebergement, .contenaire_hebergement_populaire
 {
     
-    width: 60%;
+   
     margin: 0px 30px;
     background-color: #F2F2F2;
     border-radius: 20px;
 }
 .contenaire_hebergement{
-    width: 60%;
+    width: 50%;
     padding: 34px;
 }
 .contenaire_hebergement_populaire{
-    width: 20%;
+    width: 30%;
     padding: 34px;
 }
 .hebergement_list
@@ -174,6 +191,13 @@ section.filtres p
     height: 101px;
     border-radius: 20px 20px 0 0;
     background-size: cover;
+    background-position-y: center;
+}
+.contenaire_hebergement_populaire .hebergements_banniere
+{
+    border-radius: 20px 0px 0 20px;
+    height: 125px;
+    width: 35%;
 }
 .carte
 {
@@ -184,14 +208,25 @@ section.filtres p
     width: 30%;
     margin-bottom: 20px;
 }
-.contenaire_hebergement_populaire .carte
-{
-    width: 100%;
+.contenaire_hebergement_populaire .carte {
+    width: 80%;
+    display: flex;
+    margin: 20px auto;
 }
-
+.contenu_populaire
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 20px 10px;
+}
 .carte h3, .carte p
 {
     margin: 0;
+}
+
+.contenu_populaire .rank{
+    position: relative;
+    top: 2.5rem;
 }
 .rank .active
 {
@@ -200,12 +235,28 @@ section.filtres p
 /*** Image de fond des hebergements ***/
 
 .cannebiere{background-image:url(images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg)}
+.hotel_du_port{background-image:url(images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg)}
+.mouettes{background-image:url(images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg)}
+.lamer{background-image:url(images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg)}
+.panier{background-image:url(images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg)}
+.amina{background-image:url(images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg)}
+.soleil_matin{background-image:url(images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg)}
+.hotes{background-image:url(images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg)}
+.bleu_blanc{background-image:url(images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg)}
+
+
+.vieuxport{background-image:url(images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg)}
+.pomegues{background-image:url(images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg)}
+.frioul{background-image:url(images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg)}
+.calanques{background-image:url(images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg)}
+.notredame{background-image:url(images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg)}
+.longchamp{background-image:url(images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg)}
 
 /*** Activités ***/
 .activite
 {
     margin: 30px 30px;
-    background-color: #F2F2F2;
+   
     border-radius: 20px;
     padding: 34px;
 }
@@ -241,14 +292,30 @@ section.filtres p
     box-shadow: 2px 2px 11px #e7e7e7;
     padding: 5px;
     width: 100%;
-    margin-bottom: 20px;
         
 }
+
+
+.pomegues {
+    background-image: url(images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+}
+
+.contenaire_activites .hebergements_banniere {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 119px;
+    border-radius: 20px 20px 0 0;
+    background-size: cover;
+    background-position-y: 42%;
+}
+
 .two-column
 {
     display: flex;
     flex-direction: column;
     width: 30%;
+    justify-content: space-between;
 }
 
 footer
@@ -266,6 +333,9 @@ footer ul
 {
     list-style-type: none;
     
+}
+footer ul li:first-child {
+    font-weight: 800;
 }
 footer ul li >a
 {
@@ -372,10 +442,10 @@ footer ul li >a
         background-color: white;
         border-radius: 20px;
         box-shadow: 2px 2px 11px #e7e7e7;
-        padding: 5px;
-        width: 90%;
-        margin: auto;
+        padding: 5px 5px 14px 5px;
+        width: 30%;
         margin-bottom: 20px;
+        
     }
     .carte_one_colonne, .carte_two_rows {
         background-color: white;
@@ -404,7 +474,5 @@ footer ul li >a
         padding: 30px 0px;
         flex-direction: column;
     }
-    footer ul li:first-child {
-        font-weight: 800;
-    }
+
 }
