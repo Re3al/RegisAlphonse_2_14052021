@@ -65,14 +65,14 @@ a:hover{
 .bouton_recherche div
 {
 
-    background-color: aliceblue;
+    background-color: rgb(236, 236, 236);
     padding: 8px 15px;
     border-radius: 7px 0px 0px 7px;
-    border: 1px solid #DDDDDD !important;
+    border: 1px solid rgb(236, 236, 236) !important;
 }
 .bouton_recherche div i
 {
-    color: #0065FC;
+    color: #1d1d1d;
     width: 100%;
 }
 
@@ -88,6 +88,10 @@ a:hover{
     background-color: #0065FC;
     color: white;
     border-radius: 0px 7px 7px 0px;
+}
+.bouton_recherche .loop
+{
+ display: none;
 }
 /* Style des filtres */
 section.filtres
@@ -269,7 +273,6 @@ section.filtres p
     background-color: white;
     border-radius: 20px;
     box-shadow: 2px 2px 11px #e7e7e7;
-    padding: 5px;
     width: 30%;
     margin-bottom: 20px;
  
@@ -290,7 +293,7 @@ section.filtres p
     background-color: white;
     border-radius: 20px;
     box-shadow: 2px 2px 11px #e7e7e7;
-    padding: 5px;
+
     width: 100%;
         
 }
@@ -367,13 +370,53 @@ footer ul li >a
         padding: 34px;
         margin: 30px auto;
     }
-    .contenaire_activites {
-        display: flex;
-        flex-direction: column;
+
+    .contenaire_hebergement {
+        width: 80%;
+        padding: 34px;
+    }
+    .contenaire_hebergement_populaire {
+        width: 80%;
+        padding: 34px;
+        margin: 30px auto;
     }
 
 }
+@media (max-width: 800px) {
+    .carte_one_colonne {
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 2px 2px 11px #e7e7e7;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contenaire_activites {
+        display: flex;
+        flex-direction:
+         column;
+    }
+    .two-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
 @media (max-width: 420px) {
+
+body{
+    width: 100vw;
+}
+.carte {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 11px #e7e7e7;
+    padding: 5px 5px 14px 5px;
+    width: 90%;
+    margin-bottom: 20px;
+    margin: 0;
+}
+
     .navigation{
         display: none;
     }
@@ -438,20 +481,11 @@ footer ul li >a
         border-radius: 0px;
         padding: 10px;
     }
-    .carte {
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 2px 2px 11px #e7e7e7;
-        padding: 5px 5px 14px 5px;
-        width: 30%;
-        margin-bottom: 20px;
-        
-    }
+
     .carte_one_colonne, .carte_two_rows {
         background-color: white;
         border-radius: 20px;
         box-shadow: 2px 2px 11px #e7e7e7;
-        padding: 5px;
         width: 100%;
         margin-bottom: 20px;
         margin: 0;
@@ -473,6 +507,36 @@ footer ul li >a
         justify-content: space-around;
         padding: 30px 0px;
         flex-direction: column;
+    }
+    .contenaire_hebergement_populaire .carte {
+        width: 80%;
+        display: flex;
+        margin: 20px;
+    }
+    .hebergements {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column-reverse;
+    }
+    .bouton_recherche .loop
+    {
+        width: 15%;
+        border: none;
+        background-color: #0065FC;
+        color: white;
+        border-radius: 0px 7px 7px 0px;
+        display: block;
+    }
+    .bouton_recherche .loop i
+    {
+
+        color: white;
+
+    }
+    .bouton_recherche button {
+        width: 50%;
+
+        display: none;
     }
 
 }
