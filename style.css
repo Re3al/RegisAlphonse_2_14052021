@@ -56,10 +56,9 @@ a:hover{
 }
 
 /*Formulaire de recherche */
-.bouton_recherche
-{
+.bouton_recherche {
     display: flex;
-    width: 300px;
+    width: 350px;
 }
 .bouton_recherche div
 {
@@ -75,10 +74,12 @@ a:hover{
     width: 100%;
 }
 
-.bouton_recherche input
-{
+.bouton_recherche input {
     width: 100%;
-    border: 1px solid #DDDDDD !important;
+    border-top: 1px solid #DDDDDD !important;
+    border-bottom: 1px solid #DDDDDD !important;
+    border-right: none;
+    border-left: none;
 }
 .bouton_recherche button
 {
@@ -100,9 +101,8 @@ section.filtres
     font-weight: 800;
     flex-wrap: wrap;
 }
-section.filtres p
-{
-    margin-right: 30px;
+section.filtres p {
+    margin: 14px 20px;
 }
 
 .bouton_filtre
@@ -533,14 +533,19 @@ footer ul li >a
         justify-content: space-around;
         flex-direction: column-reverse;
     }
-    .bouton_recherche .loop
-    {
-        width: 15%;
+    .bouton_recherche {
+        display: flex;
+        width: 90%;
+    }
+    .bouton_recherche .loop {
+        width: 9%;
         border: none;
         background-color: #0065FC;
         color: white;
-        border-radius: 0px 7px 7px 0px;
+        border-radius: 7px;
         display: block;
+        position: relative;
+        right: 9px;
     }
     .bouton_recherche .loop i
     {
