@@ -31,7 +31,6 @@ a, a:visited{
     display: flex;
     flex-wrap: wrap;
     width: 30%;
-    justify-content: space-around;
 }
 .navigation ul
 {
@@ -47,7 +46,7 @@ a, a:visited{
     text-decoration: none;
    
 }
-.navigation-responsive{display: none;}
+
 a.active{color: #0065FC;font-weight: 800;
     border-top: 2px solid;
     padding-top: 1.7rem;
@@ -402,11 +401,59 @@ footer ul li >a
         justify-content: space-between;
     }
 }
-@media (max-width: 420px) {
+@media (max-width: 500px) {
 
-body{
-    width: 100vw;
-}
+
+    body {width: 100%;}
+
+    /** Navigation  **/
+    .nav-top {
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .navigation {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .navigation nav {
+        display: block;
+    }
+    .navigation ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+        padding: 0;
+        width: 100vw;
+    }
+    .navigation li {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 3px solid #F2F2F2;
+    }
+    .navigation li:first-child {
+        border-bottom: 3px solid #0065FC}
+    .inscription {
+        color: #0065FC;
+        justify-content: space-between;
+        font-weight: 800;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
+
+
+    .navigation a.active {
+        border:none
+    }
+
+
+    /** Style global **/
+
 .carte {
     background-color: white;
     border-radius: 20px;
@@ -417,39 +464,7 @@ body{
     margin: 0;
 }
 
-    .navigation{
-        display: none;
-    }
-    .navigation-responsive
-    {
-        display: flex;
-    }
-    .navigation-responsive p
-    {
-        width: 50%;
-        text-align: center;
-        padding-bottom: 30px;
-        border-bottom: 3px solid #e0e0e0;
-    }
-    .navigation-responsive p.active
-    {
-        width: 50%;
-        text-align: center;
-        padding-bottom: 30px;
-        border-bottom: 3px solid #0065FC;
-        color: #0065FC;
-        font-weight: 800;
-    }
-    .navigation-responsive p a
-    {
-        text-decoration: none;
-        color: #0065FC;
-    }
-    .navigation-responsive p a:hover
-    {
-        text-decoration: none;
-        color: #00388b;
-    }
+
     .carte_one_colonne, .carte_two_rows {
         background-color: white;
         border-radius: 20px;
