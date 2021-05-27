@@ -173,7 +173,7 @@ section.filtres p {
     border-radius: 20px;
 }
 .contenaire_hebergement{
-    width: 50%;
+    width: 70%;
     padding: 34px;
 }
 .contenaire_hebergement_populaire{
@@ -202,13 +202,12 @@ section.filtres p {
     height: 125px;
     width: 35%;
 }
-.carte
-{
+.carte {
     background-color: white;
     border-radius: 20px;
     box-shadow: 2px 2px 11px #e7e7e7;
     padding: 5px;
-    width: 30%;
+    width: 27%;
     margin-bottom: 20px;
 }
 .contenaire_hebergement_populaire .carte {
@@ -227,9 +226,14 @@ section.filtres p {
     margin: 0;
 }
 
+ .rank{
+
+    color: #dbdbdb;
+}
 .contenu_populaire .rank{
     position: relative;
     top: 2.5rem;
+
 }
 .rank .active
 {
