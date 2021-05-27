@@ -191,10 +191,14 @@ section.filtres p {
     display: block;
     background-color: black;
     width: 100%;
-    height: 101px;
     border-radius: 20px 20px 0 0;
     background-size: cover;
     background-position-y: center;
+}
+.hebergements_banniere img
+{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
 }
 .contenaire_hebergement_populaire .hebergements_banniere
 {
@@ -314,6 +318,11 @@ section.filtres p {
     border-radius: 20px 20px 0 0;
     background-size: cover;
     background-position-y: 42%;
+    font-weight: 800;
+}
+.contenaire_activites  p {
+
+    font-weight: 800;
 }
 
 .two-column
