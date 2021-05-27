@@ -94,6 +94,10 @@ a:hover{
  display: none;
 }
 /* Style des filtres */
+.filtres h5
+{
+    margin-right: 10px;
+}
 section.filtres
 {
     display: flex;
@@ -146,6 +150,10 @@ section.filtres p {
     display: flex;
     align-items: center;
 }
+.logements h6{
+    font-size: 16px;
+    font-weight: 400;
+}
 .titrage_populaire
 {
     display: flex;
@@ -191,6 +199,7 @@ section.filtres p {
     display: block;
     background-color: black;
     width: 100%;
+    height: 110px;
     border-radius: 20px 20px 0 0;
     background-size: cover;
     background-position-y: center;
