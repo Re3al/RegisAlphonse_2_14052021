@@ -134,6 +134,14 @@ section.filtres
     padding: 11px;
     color: #0065FC;
 }
+.filtres > div > i:hover
+{
+    background-color: #F2F2F2;
+    border: 3px solid #F2F2F2;
+    border-radius: 30px;
+    padding: 11px;
+    color: rgb(59, 59, 59);
+}
 .filtres div:nth-child(0n+3) > i
 {
     padding: 11px 13px;
@@ -430,6 +438,16 @@ footer ul li >a
     .carte_two_rows
     {
         margin-bottom: 30px;
+    }
+    .hebergements > div {
+        margin: 20px 30px;
+        background-color: #F2F2F2;
+        border-radius: 20px;
+    }
+    .contenaire_hebergement_populaire {
+        width: 82%;
+        padding: 34px;
+        margin: 30px auto;
     }
 
 }
