@@ -535,8 +535,7 @@ footer ul li >a
     box-shadow: 2px 2px 11px #e7e7e7;
     padding: 5px 5px 14px 5px;
     width: 90%;
-    margin-bottom: 20px;
-    margin: 0;
+    margin: 10px auto;
 }
 
 .hebergements > div {
@@ -604,16 +603,20 @@ footer ul li >a
         justify-content: center;
         margin: 0px;
     }
-    footer {
-        display: flex;
-        justify-content: space-around;
-        padding: 30px 0px;
-        flex-direction: column;
+    
+    .contenaire_hebergement_populaire h2 {
+        padding-left: 30px;
+        font-size: 18px;
     }
     .contenaire_hebergement_populaire .carte {
-        width: 80%;
+        width: 90%;
         display: flex;
-        margin: 20px;
+        margin: 20px auto;
+        padding: 3px;
+    }
+    .contenu_populaire .rank {
+        position: absolute;
+        bottom: 4px;
     }
     .hebergements {
         display: flex;
@@ -650,6 +653,12 @@ footer ul li >a
         border-radius: 20px 20px 0 0;
         object-fit: cover;
         height: 160px;
+    }  
+    footer {
+        display: flex;
+        justify-content: space-around;
+        padding: 30px 0px;
+        flex-direction: column;
     }
 
 }
