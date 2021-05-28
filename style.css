@@ -398,7 +398,8 @@ footer ul li >a
         display: flex;
         flex-wrap: wrap;
         width: 60%;
-        justify-content: space-around;
+        justify-content: flex-end;
+        margin-right: 30px;
     }
     .hebergements {
         display: flex;
@@ -425,6 +426,10 @@ footer ul li >a
         width: 80%;
         padding: 34px;
         margin: 30px auto;
+    }
+    .carte_two_rows
+    {
+        margin-bottom: 30px;
     }
 
 }
@@ -498,6 +503,13 @@ footer ul li >a
         border:none
     }
 
+    section.filtres {
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        font-weight: 800;
+        flex-wrap: wrap;
+    }
 
     /** Style global **/
 
@@ -511,7 +523,16 @@ footer ul li >a
     margin: 0;
 }
 
+.hebergements > div {
+    margin: 0px;
+    background-color: #F2F2F2;
+    border-radius: 0;
+}
 
+.contenaire_hebergement_populaire
+{
+    padding: 0px;
+}
     .carte_one_colonne, .carte_two_rows {
         background-color: white;
         border-radius: 20px;
@@ -526,7 +547,7 @@ footer ul li >a
         margin: 0px;
         background-color: #F2F2F2;
         border-radius: 0px;
-        padding: 10px;
+        padding: 0px;
         
     }
     .hebergement_list {
@@ -550,7 +571,7 @@ footer ul li >a
         box-shadow: 2px 2px 11px #e7e7e7;
         width: 100%;
         margin-bottom: 20px;
-        margin: 0;
+
     }
     .carte_one_colonne div {
         padding-bottom: 20px;
@@ -604,6 +625,12 @@ footer ul li >a
         width: 50%;
 
         display: none;
+    }
+    .carte_one_colonne .hebergements_banniere img {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+        height: 160px;
     }
 
 }
