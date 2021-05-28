@@ -1,6 +1,6 @@
 /*Style */
 body{
-    font-family: 'Raleway', sans-serif;;
+    font-family: 'Raleway', sans-serif; 
     font-size: 14px;
     line-height: 1.43;
     color: #1d1d1d;
@@ -9,6 +9,14 @@ body{
     box-sizing: content-box; 
     margin: 0;   
 }
+h1{font-size: 1.2em;}
+
+.bouton_recherche ::placeholder {
+    color: #1d1d1d;
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif; 
+    padding-left: 5px;
+  }
 a, a:visited{
     text-decoration: none;
     color: inherit;
@@ -105,11 +113,9 @@ section.filtres
     font-weight: 800;
     flex-wrap: wrap;
 }
-section.filtres p {
-    margin: 14px 20px;
-}
 
-.bouton_filtre
+
+.filtres > div
 {
     display: flex;
     border-radius: 30px;
@@ -117,26 +123,24 @@ section.filtres p {
     border-right: 1px solid #DDDDDD;
     border-bottom: 1px solid #DDDDDD;
     margin-right: 30px;
+    align-items: center;
+    height: 41px;
 }
-.bouton_filtre div
+.filtres > div > i
 {
     background-color: #DEEBFF;
     border: 3px solid #DEEBFF;
-    border-radius: 29px;
-    padding: 8px 15px;
-    display: flex;
-    align-items: center;
-}
-.bouton_filtre div i
-{
+    border-radius: 30px;
+    padding: 11px;
     color: #0065FC;
-    width: 100%;
+}
+.filtres div:nth-child(0n+3) > i
+{
+    padding: 11px 13px;
 }
 
-.bouton_filtre p
-{
-    width: 100%;
-    text-align: center;
+.filtres p {
+    margin: 0px 17px;
 }
 
 
@@ -149,10 +153,12 @@ section.filtres p {
 {
     display: flex;
     align-items: center;
+    margin: 0px 30px;
 }
-.logements h6{
+.logements h4{
     font-size: 16px;
     font-weight: 400;
+    margin: 0;
 }
 .titrage_populaire
 {
@@ -165,21 +171,25 @@ section.filtres p {
     height: auto;
 }
 
-.logements img{width: 40px;height: 40px;}
+.logements img{
+    width: 40px;
+    height: 40px;}
 
-.recherche_hebergement, .filtres, .logements
+.recherche_hebergement, .filtres
 {
     margin: 30px;
 }
 /* Hebergements à Marseille*/
-.contenaire_hebergement, .contenaire_hebergement_populaire
-{
-    
-   
+.hebergements > div
+{   
     margin: 0px 30px;
     background-color: #F2F2F2;
     border-radius: 20px;
 }
+.hebergements > div > h2, .voirplus{
+    padding: 20px 0 0px 30px;
+}
+
 .contenaire_hebergement{
     width: 70%;
     padding: 34px;
@@ -197,42 +207,19 @@ section.filtres p {
 .hebergements_banniere
 {
     display: block;
-    background-color: black;
     width: 100%;
-    height: 110px;
     border-radius: 20px 20px 0 0;
-    background-size: cover;
-    background-position-y: center;
 }
 .hebergements_banniere img
 {
     width: 100%;
     border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    height: 120px;
 }
-.contenaire_hebergement_populaire .hebergements_banniere
+.carte h3, .carte p, .carte .rank
 {
-    border-radius: 20px 0px 0 20px;
-    height: 125px;
-    width: 35%;
-}
-.carte {
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 2px 2px 11px #e7e7e7;
-    padding: 5px;
-    width: 27%;
-    margin-bottom: 20px;
-}
-.contenaire_hebergement_populaire .carte {
-    width: 80%;
-    display: flex;
-    margin: 20px auto;
-}
-.contenu_populaire
-{
-    display: flex;
-    flex-direction: column;
-    margin: 0px 0px 20px 10px;
+    padding-left: 10px;
 }
 .carte h3, .carte p
 {
@@ -243,34 +230,57 @@ section.filtres p {
 
     color: #dbdbdb;
 }
-.contenu_populaire .rank{
-    position: relative;
-    top: 2.5rem;
-
+.contenu_populaire .rank {
+    position: absolute;
+    bottom: 20px;
 }
 .rank .active
 {
     color: #0065FC;
 }
-/*** Image de fond des hebergements ***/
+/** Les plus populaires **/
+.contenaire_hebergement_populaire {
+    width: 100%;
+    padding: 34px;
+}
 
-.cannebiere{background-image:url(images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg)}
-.hotel_du_port{background-image:url(images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg)}
-.mouettes{background-image:url(images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg)}
-.lamer{background-image:url(images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg)}
-.panier{background-image:url(images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg)}
-.amina{background-image:url(images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg)}
-.soleil_matin{background-image:url(images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg)}
-.hotes{background-image:url(images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg)}
-.bleu_blanc{background-image:url(images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg)}
+.carte {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 11px #e7e7e7;
+    padding: 5px;
+    width: 27%;
+    margin-bottom: 20px;
+}
+.contenaire_hebergement_populaire .carte {
+    width: 100%;
+    display: flex;
+    margin: 20px auto;
+    position: relative;
+}
+.contenu_populaire
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 4px 10px;
+}
 
 
-.vieuxport{background-image:url(images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg)}
-.pomegues{background-image:url(images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg)}
-.frioul{background-image:url(images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg)}
-.calanques{background-image:url(images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg)}
-.notredame{background-image:url(images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg)}
-.longchamp{background-image:url(images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg)}
+.contenaire_hebergement_populaire .hebergements_banniere
+{
+    display: flex;
+    width: 40%;
+    border-radius: 20px 20px 0 0;
+}
+.contenaire_hebergement_populaire .hebergements_banniere img
+{
+    width: 100%;
+    border-radius: 20px 2px 0 20px;
+    object-fit: cover;
+    height: 150px;
+}
+
+
 
 /*** Activités ***/
 .activite
@@ -299,6 +309,15 @@ section.filtres p {
     height: 300px!important;
     padding-bottom:20px;
 }
+.carte_one_colonne .hebergements_banniere img
+{
+
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    height: 320px;
+}
+
 .carte_one_colonne, .two-column 
 {
 
@@ -332,6 +351,7 @@ section.filtres p {
 .contenaire_activites  p {
 
     font-weight: 800;
+    padding-left: 20px;
 }
 
 .two-column
@@ -360,6 +380,11 @@ footer ul
 }
 footer ul li:first-child {
     font-weight: 800;
+    margin-bottom: 20px;
+}
+footer ul li {
+ 
+    margin-bottom: 10px;
 }
 footer ul li >a
 {
