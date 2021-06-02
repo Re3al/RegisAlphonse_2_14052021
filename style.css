@@ -156,6 +156,7 @@ section.filtres
 {
     display: flex;
     justify-content: space-around;
+    margin: 30px;
 }
 .logements
 {
@@ -190,9 +191,14 @@ section.filtres
 /* Hebergements à Marseille*/
 .hebergements > div
 {   
-    margin: 0px 30px;
     background-color: #F2F2F2;
     border-radius: 20px;
+ 
+}
+.hebergements > div:first-child
+{   
+    width: 65%;
+ 
 }
 .hebergements > div > h2, .voirplus{
     padding: 20px 0 0px 30px;
@@ -203,7 +209,7 @@ section.filtres
     padding: 34px;
 }
 .contenaire_hebergement_populaire{
-    width: 30%;
+        width: 25%;
     padding: 34px;
 }
 .hebergement_list
@@ -247,10 +253,7 @@ section.filtres
     color: #0065FC;
 }
 /** Les plus populaires **/
-.contenaire_hebergement_populaire {
-    width: 100%;
-    padding: 34px;
-}
+
 
 .carte {
     background-color: white;
