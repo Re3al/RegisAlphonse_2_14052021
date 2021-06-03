@@ -1,4 +1,7 @@
 /*Style */
+html{
+    overflow-x: hidden;
+}
 body{
     font-family: 'Raleway', sans-serif; 
     font-size: 14px;
@@ -52,7 +55,6 @@ a, a:visited{
 .navigation li a, a:visited
 {
     text-decoration: none;
-   
 }
 
 a.active{color: #0065FC;font-weight: 800;
@@ -70,11 +72,11 @@ a:hover{
 }
 .bouton_recherche div
 {
-
+    
     background-color: rgb(236, 236, 236);
     padding: 8px 15px;
     border-radius: 7px 0px 0px 7px;
-    border: 1px solid rgb(236, 236, 236) !important;
+    border: 1px solid #ECECEC;
 }
 .bouton_recherche div i
 {
@@ -117,19 +119,19 @@ section.filtres
 
 .filtres > div
 {
-    display: flex;
     border-radius: 30px;
-    border-top: 1px solid #DDDDDD;
-    border-right: 1px solid #DDDDDD;
-    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+    border: 1px solid #DDDDDD;
+    border-left: none;
     margin-right: 30px;
     align-items: center;
     height: 41px;
 }
+
 .filtres > div > i
 {
     background-color: #DEEBFF;
-    border: 3px solid #DEEBFF;
+    border: 3px solid #deebfffd;
     border-radius: 30px;
     padding: 11px;
     color: #0065FC;
@@ -137,9 +139,7 @@ section.filtres
 .filtres > div > i:hover
 {
     background-color: #F2F2F2;
-    border: 3px solid #F2F2F2;
-    border-radius: 30px;
-    padding: 11px;
+    border: 3px solid #f2f2f2fd;
     color: rgb(59, 59, 59);
 }
 .filtres div:nth-child(0n+3) > i
@@ -169,10 +169,14 @@ section.filtres
     font-weight: 400;
     margin: 0;
 }
+.titrage_populaire i {
+    font-size: 26px;
+}
 .titrage_populaire
 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .titrage_populaire img
 {
@@ -230,6 +234,15 @@ section.filtres
     border-radius: 20px 20px 0 0;
     object-fit: cover;
     height: 120px;
+}
+.pomegues img {
+    height: 182px;
+}
+.notredame img {
+    height: 142px;
+}
+.longchamp img {
+    height: 160px;
 }
 .carte h3, .carte p, .carte .rank
 {
@@ -314,19 +327,14 @@ section.filtres
     margin-bottom: 20px;
  
 }
-.carte_one_colonne div
-{
 
-    height: 300px!important;
-    padding-bottom:20px;
-}
 .carte_one_colonne .hebergements_banniere img
 {
 
     width: 100%;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
-    height: 320px;
+    height: 400px;
 }
 
 .carte_one_colonne, .two-column 
@@ -345,15 +353,9 @@ section.filtres
 }
 
 
-.pomegues {
-    background-image: url(images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
-}
-
 .contenaire_activites .hebergements_banniere {
     display: block;
-    background-color: black;
     width: 100%;
-    height: 119px;
     border-radius: 20px 20px 0 0;
     background-size: cover;
     background-position-y: 42%;
@@ -404,34 +406,20 @@ footer ul li >a
 }
 
 
-@media (max-width: 950px) {
+@media (max-width: 990px) {
     .navigation {
-        display: flex;
-        flex-wrap: wrap;
         width: 60%;
         justify-content: flex-end;
         margin-right: 30px;
     }
     .hebergements {
-        display: flex;
-        justify-content: space-around;
         flex-direction: column;
+        align-items: center;
     }
-    .contenaire_hebergement
-     {
-        margin: auto;
-        
-    }
-    .contenaire_hebergement_populaire
-     {
-        width: 60%;
-        padding: 34px;
-        margin: 30px auto;
-    }
-
     .contenaire_hebergement {
         width: 80%;
         padding: 34px;
+        margin: auto;
     }
     .contenaire_hebergement_populaire {
         width: 80%;
@@ -442,16 +430,12 @@ footer ul li >a
     {
         margin-bottom: 30px;
     }
-    .hebergements > div {
-        margin: 20px 30px;
-        background-color: #F2F2F2;
-        border-radius: 20px;
-    }
-    .contenaire_hebergement_populaire {
+    .hebergements > div:first-child, .contenaire_hebergement_populaire   {
         width: 82%;
         padding: 34px;
         margin: 30px auto;
     }
+ 
 
 }
 @media (max-width: 800px) {
@@ -531,10 +515,12 @@ footer ul li >a
 
     section.filtres {
         display: flex;
-        width: 80%;
-        flex-direction: column;
+        width: 90%;
         font-weight: 800;
         flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        
     }
 
     .filtres > div {
@@ -543,35 +529,57 @@ footer ul li >a
         border-top: 1px solid #DDDDDD;
         border-right: 1px solid #DDDDDD;
         border-bottom: 1px solid #DDDDDD;
-        margin-right: 30px;
-        align-items: center;
         height: 41px;
-        margin-top: 10px;
+        margin: 7px 0px;
+        width: max-content;
+        
+    }
+
+    .filtres p {
+        margin: 0px 9px;
+    }
+    .filtres h5 {
+        width: 100%;
     }
     /** Style global **/
 
-.carte {
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 2px 2px 11px #e7e7e7;
-    padding: 5px 5px 14px 5px;
-    width: 90%;
-    margin: 10px auto;
-}
+    .recherche_hebergement, .filtres {
+        margin: 15px;
+    }
 
-.hebergements > div {
-    margin: 0px;
-    background-color: #F2F2F2;
-    border-radius: 0;
-}
+    .carte {
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 2px 2px 11px #e7e7e7;
+        padding: 5px 5px 14px 5px;
+        width: 90%;
+        margin: 10px auto;
+    }
 
+    .hebergements > div {
+        margin: 0px;
+        background-color: #F2F2F2;
+        border-radius: 0;
+    }
 
-.contenaire_hebergement_populaire .hebergements_banniere img {
-    width: 100%;
-    border-radius: 20px 2px 0 20px;
-    object-fit: cover;
-    height: 110px;
-}
+    .titrage_populaire {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+    }
+
+    .hebergements > div:first-child {
+        width: 100%;
+    }
+
+    .contenaire_hebergement_populaire .hebergements_banniere img {
+        width: 100%;
+        border-radius: 20px 2px 0 20px;
+        object-fit: cover;
+        height: 130px;
+    }
     .carte_one_colonne, .carte_two_rows {
         background-color: white;
         border-radius: 20px;
@@ -604,6 +612,10 @@ footer ul li >a
         padding: 10px;
     }
 
+    .pomegues img, .longchamp img, .notredame img, .carte_one_colonne .hebergements_banniere img {
+        height: 120px;
+    }
+
     .carte_one_colonne, .carte_two_rows {
         background-color: white;
         border-radius: 20px;
@@ -624,9 +636,16 @@ footer ul li >a
         justify-content: center;
         margin: 0px;
     }
-    
+    .hebergements > div:first-child
+    {
+        background-color: #fff;
+        
+    }
+    .hebergements > div:first-child, .contenaire_hebergement_populaire {
+        margin: 0px;
+    }
     .contenaire_hebergement_populaire h2 {
-        padding-left: 30px;
+        padding-left: 0px;
         font-size: 18px;
     }
     .contenaire_hebergement_populaire .carte {
@@ -634,6 +653,7 @@ footer ul li >a
         display: flex;
         margin: 20px auto;
         padding: 3px;
+        height: 130px;
     }
     .contenu_populaire .rank {
         position: absolute;
@@ -643,6 +663,7 @@ footer ul li >a
         display: flex;
         justify-content: space-around;
         flex-direction: column-reverse;
+        margin: 10px 0;
     }
     .bouton_recherche {
         display: flex;
@@ -658,6 +679,7 @@ footer ul li >a
         position: relative;
         right: 9px;
     }
+    
     .bouton_recherche .loop i
     {
 
@@ -673,7 +695,7 @@ footer ul li >a
         width: 100%;
         border-radius: 20px 20px 0 0;
         object-fit: cover;
-        height: 160px;
+
     }  
     footer {
         display: flex;
