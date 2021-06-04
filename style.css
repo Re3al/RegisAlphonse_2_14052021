@@ -703,5 +703,10 @@ footer ul li >a
         padding: 30px 0px;
         flex-direction: column;
     }
+    @media (max-width: 320px) {
+        .filtres > div {
+            font-size: 12px;
+        }
+    }
 
 }
