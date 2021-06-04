@@ -515,7 +515,7 @@ footer ul li >a
 
     section.filtres {
         display: flex;
-        width: 88%;    
+        width: 85%;    
         font-weight: 800;
         flex-wrap: wrap;
         flex-direction: row;
