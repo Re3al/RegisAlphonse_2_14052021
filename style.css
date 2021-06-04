@@ -706,6 +706,7 @@ footer ul li >a
     @media (max-width: 320px) {
         .filtres > div {
             font-size: 12px;
+            height: 39px;
         }
     }
 
