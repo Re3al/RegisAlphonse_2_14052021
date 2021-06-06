@@ -626,7 +626,7 @@ footer ul li >a
     }
     .carte_one_colonne div {
         padding-bottom: 0px;
-        height: 134px!important;
+        height: auto;
     }
     .two-column {
         display: flex;
